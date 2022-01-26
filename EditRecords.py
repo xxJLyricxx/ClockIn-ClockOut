@@ -382,7 +382,7 @@ while (inputflag == 0):
                                 #************************opportunity******************
                                 #how do I print the person's name here inside of the "input statement"'s question
                                 #Example: "What would you like to change NOAH'S hours to?"
-                                newhours = input("What you you like to change this person's hours to?")
+                                newhours = input("What you you like to change this person's hours to?: ")
                                 #******************opportunity**************
                                 #validate numerical input 
                                 try:

@@ -1,3 +1,20 @@
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# PROGRAM NAME: AddToRecords.py
+# AUTHOR: GARY DAVIS
+# DATE: 1/21/2022
+# DESCRIPTION: THIS PROGRAMS PURPOSE IS TO ADD ENTRIES TO THE 'DATABASE' IN THIS CASE, THE DATABASE IS A TEXT FILE THAT IS SAVED IN THE SAME FOLDER
+# AS THE PROGRAM ITSELF. THE TEXT FILE INCLUDES NAMES, JOBS, ADMIN RIGHTS (WRITTEN AS EITHER 'TEAM' OR 'ADMIN') AND THEIR COUNT OF HOURS. THERE ARE A LOT OR
+# VALIDATOR LOOPS IN THIS PROGRAM. MOSTLY JUST TO MAKE SURE THAT THE CONVENTIONS FOR INPUTTING DATA REMAINS CONSISTANT WITH THE REST OF THE ENTRIES IN THE DATABASE.
+# FIRST THE USER IS ASKED IF THEY WOULD LIKE TO ENTER A NEW USER. THE INPUT MUST BE 'Y' OR 'YES'. EITHER WILL WORK. THE INPUT IS [LOWER.()]'D JUST IN CASE. IF THERE IS
+# *ANY* OTHER INPUT, THE PROGRAM WILL TERMINATE.
+# IF THE INPUT IS ACCEPTED THEN THE USER WILL BE PROMPTED TO ADD A NAME. WHEN ADDING A NAME, IT CAN NOT BE MORE THAN 10 CHARACTERS. THE USER WILL BE PROMPED TO CHANGE THE NAME
+# TO SOMETHING THAT IS LESS THAN 10 CHARACTERS 3 TIMES. IF THE USERS INPUT IS STILL LONGER THAN 10 CHARACTERS, THEIR INPUT WILL BE CUT OFF. [0:9].
+# the process continues for inputting the position [11:21] admin rights [22:31] and their hours [32:]
+# ONCE ALL THE DATA IS COLLECTED FROM THE USER, THE PROGRAM WILL APPEND A LINE TO THE DATABASE WITH THE NEW DATA.
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 import EmployeeClassv2
 #import Password
 from EmployeeClassv2 import Employee
