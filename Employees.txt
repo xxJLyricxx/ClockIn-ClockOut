@@ -21,3 +21,5 @@ evelyn     Owner      admin     35
 mike       Boss       admin     45
 mike2      boss       admin     45
 henry      cashier    admin     456
+
+GRANT      BAWS       Admin     45648561

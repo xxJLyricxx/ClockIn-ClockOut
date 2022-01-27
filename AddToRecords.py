@@ -81,7 +81,7 @@ if ((answer == "y") or (answer == "yes")):
             totalhours = input("Please enter a number: ")
             hoursflag = 0
     pswrd = input("Please enter a 4 character password for this new user: ")
-    pswrd = pswrd[0:3]
+    pswrd = pswrd[0:4]
     
     
 
@@ -89,6 +89,7 @@ if ((answer == "y") or (answer == "yes")):
     #print(spacecounter)
     employeerecords.write("\n")
     employeerecords.write(name)
+    passwordrecords.write("\n")
     passwordrecords.write(name)
     for x in range(spacecounter):
         #print(x)
