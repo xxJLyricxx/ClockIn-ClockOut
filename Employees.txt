@@ -23,3 +23,5 @@ mike2      boss       admin     45
 henry      cashier    admin     456
 
 GRANT      BAWS       Admin     45648561
+jacob      blanks     Admin     12
+jonathan   blanks     Admin     80

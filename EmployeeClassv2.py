@@ -53,7 +53,7 @@ class Employee:
 
 def main():
     
-    print("EmployeeClassv2Start")
+    #print("EmployeeClassv2Start")
     #Test creating an Employee ------------------------------------------ Successful
     #print("create an employee")
     #x = Employee("John", "cashier", "admin", 0)
@@ -81,7 +81,7 @@ def main():
     f = open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/Employees.txt", "r")
     #print("Document opened")
     #print(f)
-    print()
+    #print()
     
     team = []
     i=0
@@ -108,9 +108,9 @@ def main():
     #print(team[19].getHours())
     f.close()
     #print("Done for now")
-    print("---------")
+    #print("---------")
     print("EmployeeClassv2 End")
-    print("---------")
+    #print("---------")
     #f.close()
 
     return
