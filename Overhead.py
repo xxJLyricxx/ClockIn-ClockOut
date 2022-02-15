@@ -11,14 +11,49 @@
 #
 #Start defining programs
 from re import U
-from AddToRecordsEdit import AddToRecords 
+from AddToRecordsEdit import AddToRecords
+from RemoveFromRecordsEdit import DeleteRecord
+from EditRecordsEdit import  EditRecords
 def remove(string):
     return string.replace(" ","")
+
+def updatehours(name, hours):
+    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+        lines = f.readlines()
+        #open the document as writable so that we can add the new input to it
+        with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+            for line in lines:
+                #if the line that we're about to print contains the value typed in,
+                #don't write anything. If not, then write the line.
+                if (line.__contains__(name)):
+                    holdline = line
+                    f.write("")
+                else:
+                    f.write(line)
+        #-------------
+        #Now that the old record is removed,
+        #Write the new line at the bottom of the database
+        #close the other open instances of the database for ram purposes
+            f.close()
+        #reopen as an ammendable document
+        with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a") as f:
+            #new line
+            f.write("\n")
+            #new name
+            f.write(holdline[0:32])
+            f.write(hours)
+            f.close()
+            print("Database Updated!")
+    return
+            
+            
+
 
 currentusername = input("Please enter your username:")
 print("--------")
 print("Processing")
 print("--------")
+currentusername = currentusername.lower()
 with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/Passwords.txt", "r") as passdatabase:
     lines = passdatabase.readlines()
     founditflag = 0
@@ -44,39 +79,85 @@ with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeP
             #open the employee database to find user name, position and hours worked.
             with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/Employees.txt", "r") as employeedatabase:
                 #do the thing
-                print("-----begin new section------")
+                #print("-----begin new section------")
                 print()
                 lines = employeedatabase.readlines()
                 for line in lines:
-                    print(line)
+                    #print(line)
                     if(line.__contains__(currentusername)):
                         currentdataline = line
+                '''
                 print("the employee's name is: ", currentdataline[0:10])
                 print("The Employees position is: ", currentdataline[11:20])
                 print("The Employees Rights are: ", currentdataline[21:30])
                 print("the employees hours are: ", currentdataline[31:])
                 print()
+                '''
                 employeename = currentdataline[0:10]
                 employeeposition = currentdataline[11:20]
                 employeerights = currentdataline[22:30]
                 employeehours = currentdataline[32:]
-                print(":::",employeename,":::")
-                remove(employeename)
-                x = 0
-                while (x < len(employeename)):
-                    print("----", employeename, "----")
-                    if (employeename[x] == " "):
-                        employeename[x].replace(" ","",1)
-                        print(x)
-                        print(employeename[x])
-                    x += 1
-                print("::::", employeename,":::")
+                #print(":::",employeename,":::")               
+                #print(":::",employeeposition,":::")
+                #print(":::",employeerights,":::")
+                #print(":::",employeehours,":::")
+
+                #print("===============-=-==-=-=-=-=-=-=-=")
+                #print("Names without spaces")
+                employeename = remove(employeename)
+                employeeposition = remove(employeeposition)
+                employeerights = remove(employeerights)
+                employeehours = remove(employeehours)
+                employeehours = employeehours.replace("\n", "")
+                '''
+                print("==-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=")
+                print(":::",employeename,":::")               
                 print(":::",employeeposition,":::")
                 print(":::",employeerights,":::")
                 print(":::",employeehours,":::")
                 print("-----end new section-----")
-            print(currentusername)
+                print(currentusername)
+               
 
+                print("the employee's name is: ", currentdataline[0:10])
+                print("The Employees position is: ", currentdataline[11:20])
+                print("The Employees Rights are: ", currentdataline[21:30])
+                print("the employees hours are: ", currentdataline[31:])
+                print()
+                '''
+                print("the employee's name is: ", employeename)
+                print("The Employees position is: ", employeeposition)
+                print("The Employees Rights are: ", employeerights)
+                print("the employees hours are: ", employeehours)
+                employeehours = int(employeehours)
+                
+
+                if (employeerights == "admin"):
+                    print("This employee is an admin")
+                    print("What would you like to do?")
+                    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+                    print("1) Add New Employee")
+                    print("2) Fire an employee")
+                    print("3) Edit employee records")
+                    print("4) Add hours")
+                    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+                    sel = input("Input: ")
+                    if (sel == "1"):
+                        newemp = input("What name would you like to add?: ")
+                        AddToRecords(newemp)
+                    elif (sel == "2"):
+                        DeleteRecord()
+                    elif (sel == "3"):
+                        EditRecords()
+                    elif(sel == "4"):
+                        numhours = int(input("how many hours would you like to add?: "))
+                        employeehours = employeehours + numhours
+                        print(employeename, "now has a total hour count of", employeehours)
+                    updatehours(employeename, numhours)
+                    
+                else:
+                    print("This employee is a team member")
+                
         else:
             print("Password doesn't match")
 
