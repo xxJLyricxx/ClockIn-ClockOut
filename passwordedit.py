@@ -54,5 +54,5 @@ while (loopflag == 0):
         #if (ff == ""):
         #    print("Not in the list")
         #    loopflag = 1
-f.close()
+    f.close()
 print("fin password.py")
