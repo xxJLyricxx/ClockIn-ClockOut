@@ -33,10 +33,10 @@ def check_input(input):
         return False
 #--------------
 def AddToRecords(inputname):
-    f = open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test.txt", "a")
-    logdoc = open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a")
-    employeerecords = open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/Employees.txt", "a")
-    passwordrecords = open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/Passwords.txt", "a")
+    f = open("test.txt", "a")
+    logdoc = open("test2.txt", "a")
+    employeerecords = open("Employees.txt", "a")
+    passwordrecords = open("Passwords.txt", "a")
     #f.write("0123456789012345678901234567890")
     #f.write("\n")
     answer = input("Would you like to add a new user? ")
@@ -55,13 +55,15 @@ def AddToRecords(inputname):
         adminrights = input("Are they an admin?: ")
         adminflag = 0
         while (adminflag == 0):
+            str(adminrights)
+            print(type(adminrights))
             adminrights = adminrights.lower()
             if (adminrights == "y") or (adminrights == "yes"):
                 adminrights = "Admin"
                 adminflag = 1
             elif(adminrights == "no") or (adminrights == "n"):
                 adminrights = "Team"
-                adminrights = 1
+                adminflag = 1
             else:
                 adminrights = input("Please enter yes or no.")
                 adminflag = 0

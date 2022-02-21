@@ -10,6 +10,7 @@
 #
 #
 #Start defining programs
+import time
 from re import U
 from AddToRecordsEdit import AddToRecords
 from RemoveFromRecordsEdit import DeleteRecord
@@ -18,10 +19,11 @@ def remove(string):
     return string.replace(" ","")
 
 def updatehours(name, hours):
-    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+    hours = str()
+    with open("Employees.txt", "r") as f:
         lines = f.readlines()
         #open the document as writable so that we can add the new input to it
-        with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+        with open("Employees.txt", "w") as f:
             for line in lines:
                 #if the line that we're about to print contains the value typed in,
                 #don't write anything. If not, then write the line.
@@ -36,7 +38,7 @@ def updatehours(name, hours):
         #close the other open instances of the database for ram purposes
             f.close()
         #reopen as an ammendable document
-        with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a") as f:
+        with  open("Employees.txt", "a") as f:
             #new line
             f.write("\n")
             #new name
@@ -54,7 +56,7 @@ print("--------")
 print("Processing")
 print("--------")
 currentusername = currentusername.lower()
-with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/Passwords.txt", "r") as passdatabase:
+with open("Passwords.txt", "r") as passdatabase:
     lines = passdatabase.readlines()
     founditflag = 0
     #iterate through each line of the list searching for the name that you want to change
@@ -62,6 +64,7 @@ with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeP
         #found it!
         if(line.__contains__(currentusername)):
             print("username found")
+            time.sleep(1)
             passlinewhole = line
             passline = line[11:15]
             founditflag = 1
@@ -71,13 +74,17 @@ with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeP
         AddToRecords(currentusername)
     if (founditflag == 1):
         passwordinput = input("Please enter your password: ")
-        print(passline)
+        #print(passline)
+        print("--------")
+        print("Checking password match...")
+        print("--------")
+        time.sleep(1)
         if (passline == passwordinput):
             #correct input
             #begin processing the rest of the functions
             print("Password match")
             #open the employee database to find user name, position and hours worked.
-            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/Employees.txt", "r") as employeedatabase:
+            with open("Employees.txt", "r") as employeedatabase:
                 #do the thing
                 #print("-----begin new section------")
                 print()
@@ -142,6 +149,15 @@ with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeP
                     print("4) Add hours")
                     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
                     sel = input("Input: ")
+                    selflag = False
+                    while (selflag == False):
+                        if (sel=="1") or (sel=="2") or (sel=="3") or (sel=="4"):
+                            selflag = True
+                        else:
+                            print("That input is not one of the options above.")
+                            print("Please enter '1', '2', '3', or '4'")
+                            time.sleep(1)
+                            sel = input("Try again:")                    
                     if (sel == "1"):
                         newemp = input("What name would you like to add?: ")
                         AddToRecords(newemp)
@@ -153,7 +169,7 @@ with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeP
                         numhours = int(input("how many hours would you like to add?: "))
                         employeehours = employeehours + numhours
                         print(employeename, "now has a total hour count of", employeehours)
-                    updatehours(employeename, numhours)
+                        updatehours(employeename, employeehours)
                     
                 else:
                     print("This employee is a team member")

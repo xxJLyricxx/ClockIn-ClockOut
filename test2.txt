@@ -15,8 +15,17 @@ isabella   Cashier    team      0
 charlotte  Cashier    team      0
 amelia     Custsrvce  team      0
 mia        Manager    admin     0
-harper     CustSrvce  team      10
-henry      cashier    admin     0
+harper     CustSrvce  team      0
+evelyn     Owner      admin     35
+mike       Boss       admin     45
+mike2      boss       admin     45
+henry      cashier    admin     456
 
-
-
+GRANT      BAWS       Admin     45648561
+jacob      blanks     Admin     12
+jonathan   blanks     Admin     80
+Jaycob     Game PlayerAdmin     12
+Uverneus   desk       Admin     678
+Hector     Pirate     Admin     0
+testc      testc      Admin     0
+john       Cashier    admin     

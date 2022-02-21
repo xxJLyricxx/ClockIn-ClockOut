@@ -34,7 +34,7 @@ def EditRecords():
                 dd = input("Which would you like to change? ")
                 dd = dd.lower()
                 #open the doucment as readable
-                with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                with open("Employees.txt", "r") as f:
                     #store the document in 'lines'
                     lines = f.readlines()
                     #iterate through each line of the list searching for the name that you want to change
@@ -63,10 +63,10 @@ def EditRecords():
                             #Close the other instances of the document
                             f.close()
                             #open the doucment as readable so that it can be added to 'lines'
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                            with open("Employees.txt", "r") as f:
                                 lines = f.readlines()
                             #open the document as writable so that we can add the new input to it
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+                            with open("Employees.txt", "w") as f:
                                 for line in lines:
                                     #//print(line)
                                     #if the line that we're about to print contains the value typed in,
@@ -83,7 +83,7 @@ def EditRecords():
                             #close the other open instances of the database for ram purposes
                             f.close()
                             #reopen as an ammendable document
-                            with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a") as f:
+                            with  open("Employees.txt", "a") as f:
                                 #new line
                                 f.write("\n")
                                 #new name
@@ -108,7 +108,7 @@ def EditRecords():
                 dd = input("Which would you like to change? ")
                 dd = dd.lower()
                 #open the doucment as readable
-                with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/passwordtest.txt", "r") as f:
+                with open("Passwords.txt", "r") as f:
                     #store the document in 'lines'
                     lines = f.readlines()
                     #iterate through each line of the list searching for the name that you want to change
@@ -137,10 +137,10 @@ def EditRecords():
                             #Close the other instances of the document
                             f.close()
                             #open the doucment as readable so that it can be added to 'lines'
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/passwordtest.txt", "r") as f:
+                            with open("Passwords.txt", "r") as f:
                                 lines = f.readlines()
                             #open the document as writable so that we can add the new input to it
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/passwordtest.txt", "w") as f:
+                            with open("Passwords.txt", "w") as f:
                                 for line in lines:
                                     #//print(line)
                                     #if the line that we're about to print contains the value typed in,
@@ -157,7 +157,7 @@ def EditRecords():
                             #close the other open instances of the database for ram purposes
                             f.close()
                             #reopen as an ammendable document
-                            with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/passwordtest.txt", "a") as f:
+                            with  open("Passwords.txt", "a") as f:
                                 #new line
                                 f.write("\n")
                                 #new name
@@ -187,7 +187,7 @@ def EditRecords():
                 dd = input("Which would you like to change? ")
                 dd = dd.lower()
                 #open the doucment as readable
-                with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                with open("Employees.txt", "r") as f:
                     #store the document in 'lines'
                     lines = f.readlines()
                     #iterate through each line of the list searching for the name that you want to change
@@ -215,10 +215,10 @@ def EditRecords():
                             #Close the other instances of the document
                             f.close()
                             #open the doucment as readable so that it can be added to 'lines'
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                            with open("Employees.txt", "r") as f:
                                 lines = f.readlines()
                             #open the document as writable so that we can add the new input to it
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+                            with open("Employees.txt", "w") as f:
                                 for line in lines:
                                     #//print(line)
                                     #if the line that we're about to print contains the value typed in,
@@ -235,7 +235,7 @@ def EditRecords():
                             #close the other open instances of the database for ram purposes
                             f.close()
                             #reopen as an ammendable document
-                            with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a") as f:
+                            with  open("Employees.txt", "a") as f:
                                 #new line
                                 f.write("\n")
                                 #new name
@@ -268,7 +268,7 @@ def EditRecords():
                 dd = input("Which would you like to change? ")
                 dd = dd.lower()
                 #open the doucment as readable
-                with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                with open("Employees.txt", "r") as f:
                     #store the document in 'lines'
                     lines = f.readlines()
                     #iterate through each line of the list searching for the name that you want to change
@@ -291,10 +291,10 @@ def EditRecords():
                             #Close the other instances of the document
                             f.close()
                             #open the doucment as readable so that it can be added to 'lines'
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                            with open("Employees.txt", "r") as f:
                                 lines = f.readlines()
                             #open the document as writable so that we can add the new input to it
-                            with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+                            with open("Employees.txt", "w") as f:
                                 for line in lines:
                                     #//print(line)
                                     #if the line that we're about to print contains the value typed in,
@@ -311,7 +311,7 @@ def EditRecords():
                             #close the other open instances of the database for ram purposes
                             f.close()
                             #reopen as an ammendable document
-                            with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a") as f:
+                            with  open("Employees.txt", "a") as f:
                                 #new line
                                 f.write("\n")
                                 #new name
@@ -343,7 +343,7 @@ def EditRecords():
                 changename= input("What is the name of the person you would like to change the hours of: ")
                 changename = changename.lower()
                 #open the doucment as readable
-                with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                with open("Employees.txt", "r") as f:
                     #store the document in 'lines'
                     lines = f.readlines()
                     #iterate through each line of the list searching for the name that you want to change
@@ -401,10 +401,10 @@ def EditRecords():
                                     f.close()
                                     #open up only what we need
                                     #open the doucment as readable so that it can be added to 'lines'
-                                    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                                    with open("Employees.txt", "r") as f:
                                         lines = f.readlines()
                                     #open the document as writable so that we can add the new input to it
-                                    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+                                    with open("Employees.txt", "w") as f:
                                         for line in lines:
                                             #//print(line)
                                             #if the line that we're about to print contains the value typed in,
@@ -421,7 +421,7 @@ def EditRecords():
                                             #close the other open instances of the database for ram purposes
                                     f.close()
                                     #reopen as an ammendable document
-                                    with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a") as f:
+                                    with  open("Employees.txt", "a") as f:
                                         #new line
                                         f.write("\n")
                                         #new name
@@ -448,10 +448,10 @@ def EditRecords():
                                     f.close()
                                     if(yesorno == 'y'):
                                         #if the response to "are you sure" was yes, then rewrite the database.
-                                        with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+                                        with open("Employees.txt", "r") as f:
                                             lines = f.readlines()
                                         #open the document as writable so that we can add the new input to it
-                                        with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+                                        with open("Employees.txt", "w") as f:
                                             for line in lines:
                                                 #//print(line)
                                                 #if the line that we're about to print contains the value typed in,
@@ -468,7 +468,7 @@ def EditRecords():
                                                 #close the other open instances of the database for ram purposes
                                         f.close()
                                         #reopen as an ammendable document
-                                        with  open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "a") as f:
+                                        with  open("Employees.txt", "a") as f:
                                             #new line
                                             f.write("\n")
                                             #new name
@@ -518,9 +518,9 @@ def EditRecords():
     #recycled code
     #-----------------------------
     '''
-    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+    with open("Employees.txt", "r") as f:
         lines = f.readlines()
-    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+    with open("Employees.txt", "w") as f:
         for line in lines:
             print(line)
             if (line.__contains__(d)):

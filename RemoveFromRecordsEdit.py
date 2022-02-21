@@ -14,7 +14,7 @@ def DeleteRecord():
     d = input("Which employee would you like to delete from the database? ")
     d = d.lower()
     foundit = 0
-    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "r") as f:
+    with open("Employees.txt", "r") as f:
         lines = f.readlines()
         for line in lines:
             if (line.__contains__(d)):
@@ -24,7 +24,7 @@ def DeleteRecord():
         else:
             print("Does not exist in the database")
 
-    with open("C:/Users/davisgj/Desktop/Python Files/Employee Time Project/EmployeeProject/test2.txt", "w") as f:
+    with open("Employees.txt", "w") as f:
         for line in lines:
             #print(line)
             if (line.__contains__(d)):

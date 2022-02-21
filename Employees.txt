@@ -1,4 +1,3 @@
-john       Cashier    admin     0
 noah       Cashier    team      0
 oliver     Sweeper    team      0
 william    Sweeper    team      0
@@ -26,3 +25,8 @@ GRANT      BAWS       Admin     45648561
 jacob      blanks     Admin     12
 jonathan   blanks     Admin     80
 Jaycob     Game PlayerAdmin     12
+Uverneus   desk       Admin     678
+Hector     Pirate     Admin     0
+
+testc      ahh        Admin     0
+john       Cashier    admin     
