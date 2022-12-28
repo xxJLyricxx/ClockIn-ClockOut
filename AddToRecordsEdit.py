@@ -43,13 +43,14 @@ def AddToRecords(inputname):
     employeerecords = open("Employees.txt", "a")
     passwordrecords = open("Passwords.txt", "a")
     #ask for input
-    answer = input("Would you like to add a new user? ")
+    #answer = input("Would you like to add a new user? ")
     #make sure that the input is lower case for matching purposes
-    answer = answer.lower()
+    #answer = answer.lower()
 
     #The following section of code is to make sure that the user's input 
     #Fits the criteria of the database.
     # Is the answer yes or y?
+    answer = "yes";
     if ((answer == "y") or (answer == "yes")):
         #[inputname] is the name of the arguement included in the function call
         print("The name entered will be: '", inputname,"'")
