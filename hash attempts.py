@@ -11,6 +11,7 @@ print('=-=-=-=-=-=-=-=-=-=')
 #not sure what the 'encode()' function does in python.... not gonna lie
 name.encode()
 print("-=-=-=-=-=-=-=-=-=-=")
+
 #this only prints 'bGARY'. havent found a use for this yet
 print(name.encode())
 print('-=-=-=-=-=-=-==')
