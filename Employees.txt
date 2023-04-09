@@ -1,6 +1,5 @@
 noah       Cashier    team      0
 oliver     Sweeper    team      0
-william    Sweeper    team      0
 elijah     Cashier    team      0
 james      Manager    admin     0
 benjamin   Custsrvce  admin     0
