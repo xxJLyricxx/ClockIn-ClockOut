@@ -109,8 +109,12 @@ def AddToRecords(inputname):
         #select a 4 character password for the new user
         #anything created that is longer than 5 characters will be cut off.
         pswrd = input("Please enter a 4 character password for this new user: ")
-        pswrd = pswrd[0:3]
-        
+        pswrd = pswrd[0:4]
+        print("::",pswrd,"::")
+        print("::",pswrd[0],"::")
+        print("::",pswrd[1],"::")
+        print("::",pswrd[2],"::")
+        print("::",pswrd[3],"::")
         
         #Take the fractured pieces of the user's input and write them to the database in pieces
         #add check the length of the name for the space counter

@@ -27,4 +27,4 @@ testc      ahh        Admin     0
 john       Cashier    admin     1234
 jason      cashier    Admin     123
 avah       Cashier    admin     0
-ebony      cashier    Admin     2345
+johnq      cashier    Admin     87
