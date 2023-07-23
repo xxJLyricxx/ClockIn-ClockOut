@@ -53,9 +53,11 @@ def AddToRecords(inputname):
     answer = "yes";
     if ((answer == "y") or (answer == "yes")):
         #[inputname] is the name of the arguement included in the function call
+        inputname = inputname.lower();
         print("The name entered will be: '", inputname,"'")
         #Accept in put for the position
         position = input("Please enter their position ")
+        position = position.lower();
         #Check to make sure that the inpout is less thn 11 characters long.
         if (len(position) > 11):
             #if the input is too long, warn the user
@@ -110,11 +112,11 @@ def AddToRecords(inputname):
         #anything created that is longer than 5 characters will be cut off.
         pswrd = input("Please enter a 4 character password for this new user: ")
         pswrd = pswrd[0:4]
-        print("::",pswrd,"::")
-        print("::",pswrd[0],"::")
-        print("::",pswrd[1],"::")
-        print("::",pswrd[2],"::")
-        print("::",pswrd[3],"::")
+        # print("::",pswrd,"::")
+        # print("::",pswrd[0],"::")
+        # print("::",pswrd[1],"::")
+        # print("::",pswrd[2],"::")
+        # print("::",pswrd[3],"::")
         
         #Take the fractured pieces of the user's input and write them to the database in pieces
         #add check the length of the name for the space counter

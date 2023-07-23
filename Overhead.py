@@ -9,9 +9,9 @@
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 #
 #
-#Start defining programs
+#
 import time
-#this is short for "regular expressions"
+#"from re import U" is short for "regular expressions"
 from re import U
 from AddToRecordsEdit import AddToRecords
 from RemoveFromRecordsEdit import DeleteRecord
@@ -61,21 +61,32 @@ currentusername = currentusername.lower()
 with open("Passwords.txt", "r") as passdatabase:
     lines = passdatabase.readlines()
     founditflag = 0
-    #iterate through each line of the list searching for the name that you want to change
+    #iterate through each line of passwords.txt
     for line in lines:
-        #found it!
         if(line.__contains__(currentusername)):
             usernamecounter += 1;
-            print("username found")
             time.sleep(1)
-            passlinewhole = line
-            passline = line[11:15]
-            founditflag = 1
-            passdatabase.close()
-            print("Username counter = ", usernamecounter)
+            foundname = line[0:10]
+            foundname = foundname.replace(" ","")
+            if (foundname == currentusername):
+                #found an exact match
+                passlinewhole = line
+                passline = line[11:15]
+                founditflag = 1
+                passdatabase.close()
+                break
+            else:
+                #did not find a match. keep going
+                continue
+    #Username not found in database
+    print(usernamecounter)        
     if (founditflag == 0):
         print("Username not found in database")
-        AddToRecords(currentusername)
+        continueyesno = input("Would you like to add that name to the database?: ")
+        if (continueyesno == 'yes' or continueyesno =='y'):
+            AddToRecords(currentusername);
+        else:
+            pass;
     if (founditflag == 1):
         passwordinput = input("Please enter your password: ")
         #print(passline)
@@ -91,12 +102,19 @@ with open("Passwords.txt", "r") as passdatabase:
             with open("Employees.txt", "r") as employeedatabase:
                 #do the thing
                 #print("-----begin new section------")
-                print()
+                print(line)
                 lines = employeedatabase.readlines()
                 for line in lines:
                     #print(line)
                     if(line.__contains__(currentusername)):
                         currentdataline = line
+                        print("<",currentdataline,">")
+                        employeename = currentdataline[0:10]
+                        employeename = employeename.replace(" ","")
+                        if (employeename == foundname):
+                            break
+                        else:
+                            continue
                 '''
                 print("the employee's name is: ", currentdataline[0:10])
                 print("The Employees position is: ", currentdataline[11:20])
@@ -108,34 +126,13 @@ with open("Passwords.txt", "r") as passdatabase:
                 employeeposition = currentdataline[11:20]
                 employeerights = currentdataline[22:30]
                 employeehours = currentdataline[32:]
-                #print(":::",employeename,":::")               
-                #print(":::",employeeposition,":::")
-                #print(":::",employeerights,":::")
-                #print(":::",employeehours,":::")
-
-                #print("===============-=-==-=-=-=-=-=-=-=")
-                #print("Names without spaces")
+                
                 employeename = remove(employeename)
                 employeeposition = remove(employeeposition)
                 employeerights = remove(employeerights)
                 employeehours = remove(employeehours)
                 employeehours = employeehours.replace("\n", "")
-                '''
-                print("==-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=")
-                print(":::",employeename,":::")               
-                print(":::",employeeposition,":::")
-                print(":::",employeerights,":::")
-                print(":::",employeehours,":::")
-                print("-----end new section-----")
-                print(currentusername)
-               
-
-                print("the employee's name is: ", currentdataline[0:10])
-                print("The Employees position is: ", currentdataline[11:20])
-                print("The Employees Rights are: ", currentdataline[21:30])
-                print("the employees hours are: ", currentdataline[31:])
-                print()
-                '''
+                
                 print("the employee's name is: ", employeename)
                 print("The Employees position is: ", employeeposition)
                 print("The Employees Rights are: ", employeerights)
