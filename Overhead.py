@@ -70,7 +70,6 @@ with open("Passwords.txt", "r") as passdatabase:
             foundname = foundname.replace(" ","")
             if (foundname == currentusername):
                 #found an exact match
-                passlinewhole = line
                 passline = line[11:15]
                 founditflag = 1
                 passdatabase.close()
