@@ -27,11 +27,6 @@ def nameInEmployees(inputname):
                 #compare it to inputname
                 if (foundname == inputname):
                     #found an exact match
-                    #-=-=-=
-                    #test
-                    #-=-=-=
-                    print("found the perfect match")
-                    print(inputname, "<>", foundname)
                     foundItFlag = True;
                     break
                 else:
@@ -40,9 +35,3 @@ def nameInEmployees(inputname):
                 continue
     employeedatabase.close()
     return foundItFlag;
-#::TEST ME::
-# exp = input("Please enter a name to test: ")
-# if (nameInEmployees(exp)):
-#     print("Found it")
-# else:
-#     print("Not found")
