@@ -12,6 +12,7 @@
 #
 import time
 #"from re import U" is short for "regular expressions"
+from logMe import logMe
 from re import U
 from AddToRecordsEdit import AddToRecords
 from RemoveFromRecordsEdit import DeleteRecord
@@ -38,7 +39,7 @@ def updatehours(name, hours):
         #Write the new line at the bottom of the database
         #close the other open instances of the database for ram purposes
             f.close()
-        #reopen as an ammendable document
+        #reopen as an appendable document
         with  open("Employees.txt", "a") as f:
             #new line
             f.write("\n")
