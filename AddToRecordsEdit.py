@@ -26,7 +26,8 @@
 #import Filesearch Function
 #DEFINE
 from FileSearch import nameInEmployees
-
+from logMe import logMe
+logMe(str("<Addto> BEGIN."))
 def check_input(input):
     #ERROR CATCHING 
     try:
@@ -41,9 +42,11 @@ def check_input(input):
 
 #begin 'add to records' function
 def AddToRecords(inputname):
+    logMe(str("<Addto> BEGIN."))
     #before you do anything, is this name in the database already?
     if (nameInEmployees(inputname)):
         print("Can not add due to <DUPLICATE ERROR>")
+        logMe(str("<Addto> <DUPLICATE ERROR>"))
         return
     else:
 
@@ -155,15 +158,18 @@ def AddToRecords(inputname):
 
             #Confirm that the process has completed
             print("input added to the database")
+            logMe(str("<Addto> New user added to the Database."))
+            logMe(str("<Addto> " + inputname))
         #print if user types 'no' when asked if they would like to add a user.
         else:
             print()
-            print("==========")
-            print("RETURNING")
-            print("==========")
-            print()
+            # print("==========")
+            # print("RETURNING")
+            # print("==========")
+            # print()
         #closes all the opened text files
         employeerecords.close()
         passwordrecords.close()
         #return
+        logMe(str("<Addto> END."))
         return;

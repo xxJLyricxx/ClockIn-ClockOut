@@ -27,3 +27,4 @@ john       Cashier    admin     1234
 jason      cashier    Admin     123
 avah       Cashier    admin     0
 johnq      cashier    Admin     87
+starter    baws       Admin     123
