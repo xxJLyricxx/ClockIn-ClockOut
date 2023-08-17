@@ -56,6 +56,7 @@ def updatehours(name, hours):
 currentusername = input("Please enter your username:")
 print("--------")
 print("Processing")
+logMe(str("Login attempted: " + currentusername))
 print("--------")
 usernamecounter = 0;
 currentusername = currentusername.lower()
@@ -79,13 +80,14 @@ with open("Passwords.txt", "r") as passdatabase:
                 #did not find a match. keep going
                 continue
     #Username not found in database
-    print(usernamecounter)        
+    #print(usernamecounter)        
     if (founditflag == 0):
         print("Username not found in database")
         continueyesno = input("Would you like to add that name to the database?: ")
         if (continueyesno == 'yes' or continueyesno =='y'):
             AddToRecords(currentusername);
         else:
+            logMe(str("Username " + currentusername + "not added to database."))
             pass;
     if (founditflag == 1):
         passwordinput = input("Please enter your password: ")
@@ -98,17 +100,18 @@ with open("Passwords.txt", "r") as passdatabase:
             #correct input
             #begin processing the rest of the functions
             print("Password match")
+            logMe(str("<OVHD> LOGIN SUCCESSFUL - " + currentusername))
             #open the employee database to find user name, position and hours worked.
             with open("Employees.txt", "r") as employeedatabase:
                 #do the thing
                 #print("-----begin new section------")
-                print(line)
+                #print(line)
                 lines = employeedatabase.readlines()
                 for line in lines:
                     #print(line)
                     if(line.__contains__(currentusername)):
                         currentdataline = line
-                        print("<",currentdataline,">")
+                        #print("<",currentdataline,">")
                         employeename = currentdataline[0:10]
                         employeename = employeename.replace(" ","")
                         if (employeename == foundname):
@@ -162,10 +165,13 @@ with open("Passwords.txt", "r") as passdatabase:
                             sel = input("Try again:")                    
                     if (sel == "1"):
                         newemp = input("What name would you like to add?: ")
+                        logMe(str(currentusername + " -> <ENTER <ADDTO>> ->" + newemp))
                         AddToRecords(newemp)
                     elif (sel == "2"):
+                        logMe(str(currentusername + " -> <ENTER <DELETE>>"))
                         DeleteRecord()
                     elif (sel == "3"):
+                        logMe(str(currentusername + " -> <ENTER <EDIT>>"))
                         EditRecords()
                     elif(sel == "4"):
                         numhours = int(input("how many hours would you like to add?: "))
@@ -180,3 +186,4 @@ with open("Passwords.txt", "r") as passdatabase:
             print("Password doesn't match")
 
 print("FIN")
+logMe(str(currentusername + " logged out."))
