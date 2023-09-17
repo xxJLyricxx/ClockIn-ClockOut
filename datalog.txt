@@ -14,3 +14,9 @@
 [8/15/2023 ~ 12:27:37] - <Addto> New user added to the Database.
 [8/15/2023 ~ 12:27:37] - <Addto> starter
 [8/15/2023 ~ 12:27:37] - <Addto> END.
+[8/28/2023 ~ 21:33:43] - <Addto> BEGIN.
+[8/28/2023 ~ 21:34:1] - <Addto> BEGIN.
+[9/3/2023 ~ 10:2:16] - <Addto> BEGIN.
+[9/3/2023 ~ 10:2:34] - <Addto> BEGIN.
+[9/8/2023 ~ 12:5:8] - Login attempt: test
+[9/8/2023 ~ 12:18:43] - Login attempt(tkinter): test1
